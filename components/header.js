@@ -20,17 +20,18 @@ const Header = (props) => {
 
     window.addEventListener("scroll", handleScroll);
 
-    if (scrollY > 0) {
-      console.log();
+    if (window.scrollY > 0) {
+      console.log('what');
       setHeaderShort(true);
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      }
     } else {
       setHeaderShort(false);
     }
 
-  }, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    }
+
+  }, [scrollY]);
 
   return (
     <header className={`${styles.Header} ${headerShort ? styles.HeaderShort : ''} container`}>
