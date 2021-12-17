@@ -1,0 +1,157 @@
+@keyframes projCirclePop {
+    0% {
+        opacity: 0;
+        transform: scale(0)
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+@keyframes projImgUpRight {
+    0% {
+        opacity: 0;
+        transform: translate(100%, 100%)
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px)
+    }
+}
+
+@keyframes projImgUpLeft {
+    0% {
+        opacity: 0;
+        transform: translate(-100%, 100%)
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px)
+    }
+}
+
+.Project {
+    margin-top: -60px;
+    padding: 10% 6% 140px;
+}
+
+.Project:nth-child(odd) {
+    flex-flow: row-reverse nowrap;
+}
+
+.Project__TopClip:nth-child(odd) {
+    clip-path: polygon(0 60px, 100% 0%, 100% 100%, 0 100%);
+}
+
+.Project__TopClip:nth-child(even) {
+    clip-path: polygon(0 0, 100% 60px, 100% 100%, 0 100%);
+}
+
+
+
+.Project__Img {
+    width: 50%;
+    margin: auto;
+    position: relative;
+}
+
+.Project__Img img {
+    width: 100%;
+    opacity: 0;
+}
+
+.Project__ImgAnimRight {
+    animation: projImgUpRight 1s ease forwards;
+} 
+
+.Project__ImgAnimLeft {
+    animation: projImgUpLeft 1s ease forwards;
+} 
+
+.Project__ImgCircle {
+    width: 75%;
+    height: 75%;
+    border-radius: 100%;
+    position: absolute;
+    top: 12%;
+    left: 12%;
+    z-index: -1;
+    opacity: 0;
+}
+
+.Project__ImgCircleAnim {
+    animation: projCirclePop 1s ease forwards;
+}
+
+.Project__Info {
+    width: 100%;
+}
+
+.Project__InfoTitle {
+    font-size: 3.6em;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.Project__InfoType {
+    color: var(--color-text-gray);
+    font-size: 1.2em;
+    text-transform: lowercase;
+    letter-spacing: 0.2rem;
+}
+
+.Project__InfoDetail {
+    color: var(--color-text-gray);
+    line-height: 1.4em;
+}
+
+
+.Project__BtnMore {
+    background: var(--color-gray-light);
+    color: var(--color-text-gray);
+    font-family: Avenir;
+    text-transform: lowercase;
+    letter-spacing: 0.2rem;
+    padding: 0.7rem 2.2rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    float: right;
+    display: flex;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.Project__BtnMore:hover {
+    box-shadow: 0 5px 10px rgb(0 0 0 / 12%), 0 5px 5px rgb(0 0 0 / 10%);
+}
+
+.Project__BtnMore img {
+    width: 20px;
+    padding-top: 1px;
+    padding-left: 4px;
+    transition: 0.4s;
+}
+
+.Project__BtnMore:hover img {
+    transform: translateX(6px);
+}
+
+
+
+@media screen and (min-width: 992px) {
+    .Project {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8% 6% 10%;
+    }
+    .Project__Img {
+        width: 50%;
+    }
+    .Project__Info {
+        width: 50%;
+    }
+}

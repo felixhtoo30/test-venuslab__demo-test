@@ -1,3 +1,9 @@
-module.exports = {
-  reactStrictMode: true,
-}
+const withFonts = require('next-fonts');
+
+module.exports = withFonts({
+    reactStrictMode: true,
+   enableSvg: true,
+   webpack(config, options) {
+     return config;
+   }
+});

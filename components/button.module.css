@@ -1,0 +1,39 @@
+.BtnPrimary {
+    width: 180px;
+    height: 42px;
+    background: var(--color-primary);
+    padding: 4px;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    font-family: Avenir;
+    text-transform: uppercase;
+    white-space: nowrap;
+    position: relative;
+    transition: 0.5s;
+}
+
+.BtnPrimary:before {
+    content: "";
+    width: 94%;
+    height: 80%;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 10%;
+    left: 3%;
+    z-index: 1;
+    border-radius: 2rem;
+    background: var(--color-white);
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.BtnPrimary:hover:before {
+    transform: scale(1);
+}
+
+.BtnPrimary span {
+    position: relative;
+    z-index: 5;
+}

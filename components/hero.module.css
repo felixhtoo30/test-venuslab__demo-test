@@ -1,0 +1,36 @@
+.Hero {
+    background: var(--color-secondary);
+    padding-top: var(--header-height);
+    padding-left: 8%;
+    padding-bottom: 6%;
+    height: 98vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.Hero__TitleLight {
+    font-family: BebasNeue;
+    font-weight: 200;
+    font-size: calc(2.2rem + 10vw);
+    color: var(--color-primary);
+    padding: 0;
+    margin: 0;
+}
+.Hero__TitleBold {
+    font-family: BebasNeue;
+    font-weight: bold;
+    font-size: calc(4rem + 10.5vw);
+    line-height: 0.8em;
+    color: var(--color-primary);
+    padding: 0;
+    margin: 0;
+}
+.Hero__Tagline {
+    font-weight: normal;
+    font-size: calc(0.7rem + 0.8vw);
+    line-height: 0.9em;
+    color: var(--color-white);
+    padding: 0;
+    margin: 0;
+}

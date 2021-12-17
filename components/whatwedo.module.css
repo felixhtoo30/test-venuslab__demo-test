@@ -1,0 +1,77 @@
+.WhatWeDo {
+    margin-top: -60px;
+    padding: 8% 6% 10%;
+    clip-path: polygon(0 60px, 100% 0, 100% 100%, 0 100%);
+    background-size: cover;
+}
+
+.WhatWeDo__Title {
+  font-size: 1.8em;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 0;
+  padding: 40px 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.WhatWeDo__List {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    color: var(--color-white);
+    padding: 0 4%;
+}
+
+.WhatWeDo__ListItem {
+    display: flex;
+    flex-flow: column;
+    justify-content:  flex-start;
+    width: 100%;
+    margin-top: 4%;
+    text-align: center;
+}
+
+.WhatWeDo__ListItemImg {
+    width: 50%;
+    height: 0;
+    padding-bottom: 40%;
+    margin: 0 auto;
+}
+
+.WhatWeDo__ListItemImg img {
+    width: 100%;
+}
+
+.WhatWeDo__ListItemTitle {
+    font-size: 1.8rem;
+}
+
+.WhatWeDo__LetsTalk {
+    text-align: center;
+}
+
+.WhatWeDo__LetsTalkTitle {
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.WhatWeDo__LetsTalkBrief {
+    max-width: 600px;
+    margin: auto;
+    color: var(--color-white);
+}
+
+.WhatWeDo__LetsTalkBtn {
+    margin-top: 2rem;
+}
+
+
+@media screen and (min-width: 768px) {
+    .WhatWeDo__ListItem {
+        width: 45%;
+    }
+}
